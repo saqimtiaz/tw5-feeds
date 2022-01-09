@@ -1,0 +1,8 @@
+title: $:/plugins/sq/feeds/templates/json-skinny-tiddlers
+
+`[`
+<$list filter={{$:/config/feeds/json-tiddlers-filter}} counter="counter">
+<$jsontiddler tiddler=<<currentTiddler>> exclude="text" escapeUnsafeScriptChars="yes"/>
+<$list filter="[<counter-last>!match[yes]]">,</$list>
+</$list>
+`]`

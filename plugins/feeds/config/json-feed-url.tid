@@ -1,0 +1,3 @@
+title: $:/config/feeds/json/url
+
+[{$:/config/feeds/SiteBaseUrl}addsuffix[/feeds]addsuffix[/feed.json]]

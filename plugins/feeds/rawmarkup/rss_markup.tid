@@ -1,0 +1,6 @@
+title: $:/plugins/sq/feeds/rawmarkup/rss
+tags: $:/tags/RawMarkupWikified
+
+<$list filter="[[$:/config/feeds/rss/rawmarkup]!is[blank]else[no]match[yes]]" variable="_NULL">
+<link rel="alternate" type="application/rss+xml" title="`<$view tiddler="$:/config/feeds/title" format="plainwikified"/>`" href="`<$text text={{{ [subfilter{$:/config/feeds/json/url}] }}}/>`" />
+</$list>

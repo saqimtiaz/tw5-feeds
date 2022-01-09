@@ -1,0 +1,25 @@
+title: $:/plugins/sq/feeds/templates/rss
+
+\whitespace trim
+\import [[$:/plugins/sq/feeds/macros/rss]]
+`<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel><atom:link href="`<$text text={{{ [subfilter{$:/config/feeds/xml/url}] }}}/>`" rel="self" type="application/rss+xml"/>
+<title>`<$view tiddler="$:/config/feeds/title" format="plainwikified"/>`</title>
+<link>`<$text text={{$:/config/feeds/SiteBaseUrl}}/>`</link>
+<description>`<$view tiddler="$:/config/feeds/description" format="plainwikified"/>`</description>
+<language>`<$text text={{{ [{$:/language}removeprefix[$:/languages/]] }}}/>`</language>`
+<$list filter={{$:/config/feeds/filter}}>
+`<item>
+<title>`<$text text=<<currentTiddler>>/>`</title>
+<description>`
+<$wikify name="description" text={{{ [<currentTiddler>get[text]] }}} output="html">
+<$text text={{{ [<description>encodehtml[]] }}}/>
+</$wikify>
+`</description>
+<pubDate>`<$text text={{{ [{!!modified}else{!!created}format:date<dateFormat>] }}}/>` GMT</pubDate>
+<link>`<$text text={{{[subfilter<getPermalink>]}}}/>`</link>
+<guid isPermaLink="true">`<$text text={{{[subfilter<getPermalink>]}}}/>`</guid>
+</item>`
+</$list>
+`</channel></rss>`

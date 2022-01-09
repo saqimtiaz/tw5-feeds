@@ -1,0 +1,15 @@
+created: 20211003181305149
+modified: 20211003181307917
+title: $:/rss testing
+type: text/vnd.tiddlywiki
+
+<$button>download rss
+<$action-sendmessage $message="tm-download-file" $param="rss.xml"/>
+</$button>
+
+<$button>generate
+<$wikify name="rss" text={{$:/plugins/sq/feeds/templates/rss}}>
+<$action-log rss=<<rss>>/>
+<$action-setfield $tiddler="rss.xml" text=<<rss>>/>
+</$wikify>
+</$button>

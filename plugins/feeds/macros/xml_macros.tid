@@ -1,0 +1,7 @@
+title: $:/plugins/sq/feeds/macros/rss
+
+\define getPermalink()
+[<currentTiddler>encodeuricomponent[]addprefix[#]addprefix{$:/config/feeds/SiteBaseUrl}]
+\end
+
+\define dateFormat() [UTC] ddd, 0DD mmm YYYY 0hh:0mm:0ss

@@ -1,0 +1,5 @@
+title: $:/plugins/sq/feeds/macros/json
+
+\define dateFormat() [UTC] YYYY-0MM-0DDT0hh:0mm:0ssZ
+
+{{{ [{!!modified}else{!!created}format:date<dateFormat>] }}}

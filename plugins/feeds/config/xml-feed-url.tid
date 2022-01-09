@@ -1,0 +1,3 @@
+title: $:/config/feeds/xml/url
+
+[{$:/config/feeds/SiteBaseUrl}addsuffix[/feeds]addsuffix[/xml.rss]]

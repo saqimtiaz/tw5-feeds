@@ -1,0 +1,18 @@
+{
+  "name": "feeds",
+  "version": "0.1.0",
+  "description": "TiddlyWiki plugin for creating RSS and JSON feeds",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./node_modules/tiddlywiki/tiddlywiki.js . --build index",
+    "dev": "npx nodemon -e tid,multids,js,info --watch plugins ./node_modules/tiddlywiki/tiddlywiki.js . --listen port=7112"
+  },
+  "author": "Saq Imtiaz",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "tiddlywiki": "^5.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}

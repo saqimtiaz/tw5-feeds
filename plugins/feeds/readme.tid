@@ -1,0 +1,17 @@
+title: $:/plugins/sq/feeds/readme
+
+@@color:red;''Highly experimental - no support available. Use at your own risk.''@@ 
+
+Generate RSS and JSON feeds for your ~TiddlyWiki
+
+For a single file wiki at the path `my-wiki.html`:
+
+```
+tiddlywiki.js --load my-wiki.html --render "[[$:/plugins/sq/feeds/templates/rss]]" "feed.xml" "text/plain" "$:/core/templates/wikified-tiddler"
+```
+
+For node.js folder wiki at the path `mywiki/`:
+
+```
+tiddlywiki.js mywiki/ --render "[[$:/plugins/sq/feeds/templates/rss]]" "feed.xml" "text/plain" "$:/core/templates/wikified-tiddler"
+```

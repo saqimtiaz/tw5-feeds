@@ -1,0 +1,10 @@
+{
+	"title": "$:/plugins/sq/feeds",
+	"description": "RSS, JSON and other feeds support",
+	"name": "Feeds",
+	"author": "Saq Imtiaz",
+	"core-version": ">=5.2.0",
+	"plugin-priority": 0,
+	"list": "readme settings",
+	"version": "0.1.0"
+}
